@@ -1,0 +1,758 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio</title>
+    <link rel="icon" href="imagenes/logotipo.png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/inicio.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.5/font/bootstrap-icons.min.css">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #FDF6EC;
+            color: #333;
+        }
+        .navbar {
+            transition: background-color 0.3s ease;
+        }
+        .navbar-brand {
+            font-weight: bold;
+            color: #E2AA87;
+            transition: color 0.3s ease;
+        }
+        .navbar-nav .nav-link {
+            font-weight: bold;
+            color: #E2AA87;
+            transition: color 0.3s ease, transform 0.3s ease;
+        }
+        .navbar-nav .nav-link:hover {
+            color: #333;
+            transform: translateY(-2px);
+        }
+        .navbar-nav .nav-link.active {
+            color: #E2AA87;
+        }
+        .navbar-nav .nav-link.inicio {
+            color: #333;
+        }
+        .navbar-nav .nav-link.inicio:hover {
+            color: #333;
+        }
+        .slider-box {
+            width: 100%;
+            overflow: hidden;
+            position: relative;
+            margin-bottom: 30px;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        #slider {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
+        .slide {
+            min-width: 100%;
+        }
+        .slide img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+        }
+        .slider-text {
+            text-align: center;
+            position: relative;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            color: #fff;
+            width: 100%;
+        }
+        .slider-text h2 {
+            font-size: 2rem;
+            margin-bottom: 10px;
+        }
+        .slider-text p {
+            font-size: 1.25rem;
+        }
+        #services {
+            background-color: #E2AA87;
+            color: #fff;
+        }
+        .service-box {
+            background: #D1896F;
+            padding: 20px;
+            border-radius: 8px;
+            color: #fff;
+        }
+        #gallery {
+    background-color: #f5f5f5; 
+    padding: 60px 0; 
+}
+
+#gallery h2 {
+    font-family: 'Arial', sans-serif;
+    color: #333;
+    font-size: 2.8rem; 
+    margin-bottom: 40px;
+    font-weight: bold;
+    letter-spacing: 1.5px; 
+    text-transform: uppercase; 
+}
+
+#gallery .row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px; 
+    justify-content: center; 
+}
+
+#gallery .col-md-4 {
+    flex: 1 1 calc(33.333% - 30px); 
+    max-width: calc(33.333% - 30px); 
+}
+
+#gallery img {
+    width: 100%;
+    height: 300px; 
+    object-fit: cover; 
+    border-radius: 12px; 
+    box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.15); 
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+#gallery img:hover {
+    transform: scale(1.1); 
+    box-shadow: 0px 12px 30px rgba(0, 0, 0, 0.25); 
+}
+
+#gallery .col-md-4:hover img {
+    border: 4px solid #E2AA87;
+}
+
+#gallery .container {
+    max-width: 1200px; 
+    margin: 0 auto; 
+}
+
+
+        #faq {
+            background-color: #F4D3B3;
+            color: #333;
+        }
+        .accordion-button {
+            background-color: #E2AA87;
+            color: #FFF;
+            border: none;
+        }
+        .accordion-button:not(.collapsed) {
+            color: #333;
+            background-color: #D1896F;
+        }
+        .accordion-button:hover {
+            background-color: #D1896F;
+            color: #FFF;
+        }
+        #faq-message .btn-primary {
+            background-color: #E2AA87;
+            border: none;
+        }
+        #faq-message .btn-primary:hover {
+            background-color: #D1896F;
+        }
+        .card {
+            transition: transform 0.3s ease;
+        }
+        .card:hover {
+            transform: scale(1.05);
+        }
+        .card-img-top {
+            width: 100%;
+            height: auto;
+        }
+        .card-body {
+            text-align: center;
+        }
+        .btn-pink {
+            background-color: #F4A4B4;
+            color: #FFF;
+            border: none;
+        }
+        .btn-pink:hover {
+            background-color: #E2AA87;
+        }
+        footer {
+            background-color: #333;
+            color: #FFF;
+            padding: 40px 0;
+        }
+        footer h5 {
+            color: #FFF;
+            margin-bottom: 15px;
+        }
+        footer a {
+            color: #FFF;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        footer a:hover {
+            color: #E2AA87;
+        }
+        footer .social-links a {
+            font-size: 1.5rem;
+            margin-right: 15px;
+            color: #FFF;
+        }
+        footer .social-links a:hover {
+            color: #E2AA87;
+        }
+        footer .list-unstyled {
+            list-style: none;
+            padding-left: 0;
+        }
+        footer .list-unstyled li {
+            margin-bottom: 10px;
+        }
+        footer .list-unstyled li a {
+            color: #FFF;
+            transition: color 0.3s ease;
+        }
+        footer .list-unstyled li a:hover {
+            color: #E2AA87;
+        }
+        footer .text-center {
+            margin-top: 30px;
+        }
+        footer p {
+            color: #FFF;
+            margin: 0;
+        }
+        #team {
+    background-color: #f9f9f9; 
+    padding: 60px 0; 
+}
+.team-link {
+    text-decoration: none; 
+    color: inherit; 
+}
+
+.team-link:hover .team-member {
+    transform: translateY(-10px); 
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2); 
+}
+
+
+#team .row {
+    display: flex;
+    justify-content: center; 
+    flex-wrap: wrap; 
+    gap: 30px; 
+}
+
+.team-member {
+    text-align: center; 
+    padding: 20px;
+    background-color: #fff; 
+    border-radius: 10px; 
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1); 
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.team-member:hover {
+    transform: translateY(-10px); 
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2); 
+}
+
+.team-member img {
+    width: 150px; 
+    height: 150px;
+    border-radius: 50%; 
+    object-fit: cover; 
+    margin-bottom: 15px; 
+    border: 5px solid #E2AA87; 
+}
+
+
+.team-member h4 {
+    font-size: 1.5rem; 
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.team-member p {
+    font-size: 1rem;
+    color: #777; 
+    font-style: italic; 
+    line-height: 1.5;
+    max-width: 250px; 
+    margin: 0 auto; 
+}
+
+.additional-service-box {
+    background-color: #E2AA87; 
+    padding: 30px;
+    border-radius: 10px; 
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1); 
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    color: white; 
+}
+
+.additional-service-box h4, 
+.additional-service-box p {
+    color: white; 
+}
+.additional-service-box:hover {
+    transform: translateY(-10px); 
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2); 
+}
+
+.service-link {
+    text-decoration: none; 
+    color: inherit; 
+}
+
+.service-link:hover {
+    text-decoration: none; 
+    color: inherit;
+}
+
+    </style>
+</head>
+<body>
+    <header class="bg-white py-3 shadow-sm">
+        <div class="container">
+            <nav class="navbar navbar-expand-lg navbar-light">
+                <a class="navbar-brand" href="inicio.html">Patitas al Rescate</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link inicio" href="inicio.html">Inicio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="consejos.html">Consejos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="preguntas.html">Preguntas Frecuentes</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="nosotros.html">Nosotros</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contacto.html">Contacto</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="slider-box">
+            <div id="slider">
+                <div class="slide">
+                    <img src="imagenes/img.perrospq/Papillon.jpeg" alt="Imagen 1">
+                </div>
+                <div class="slide">
+                    <img src="imagenes/img.perrosmedianos/Alaskan Malamute.webp" alt="Imagen 2">
+                </div>
+                <div class="slide">
+                    <img src="imagenes/img.perrosgrandes/Cane_Corso.png" alt="Imagen 3">
+                </div>
+                <div class="slide">
+                    <img src="imagenes/img.perrospq/Havanese.webp" alt="Imagen 4">
+                </div>
+            </div>
+        </div>
+
+        <section id="services" class="py-5">
+            <div class="container">
+                    <h2 class="text-center mb-4">El Mejor Cuidado para tus Mascotas</h2>
+                    <Center><h4>Nos importa la salud y felicidad de tus amigos peludos.</h4></Center>
+                    
+                <h2 class="text-center mb-4">Nuestros Servicios</h2>
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="service-box text-center">
+                            <i class="bi bi-house-door" style="font-size: 2rem;"></i>
+                            <h4>Cuidados Diarios</h4>
+                            <p>Atención y cuidados diarios para mantener a tus mascotas felices y saludables.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="service-box text-center">
+                            <i class="bi bi-capsule" style="font-size: 2rem;"></i>
+                            <h4>Atención Médica</h4>
+                            <p>Servicios médicos especializados para el bienestar integral de tus mascotas.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="service-box text-center">
+                            <i class="bi bi-egg-fried" style="font-size: 2rem;"></i>                            
+                            <h4>Alimentación personalizada</h4>
+                            <p>Te guiamos en la elección de la mejor dieta para tu perro, adaptada a sus necesidades.</p>
+                        </div>
+                    </div>                    
+                </div>
+            </div>
+        </section>
+        
+        <section id="additional-services" class="py-5">
+            <div class="container">
+                <h2 class="text-center mb-4">Servicios Adicionales</h2>
+                <div class="row">
+                    <div class="col-md-6">
+                        <a href="preguntas.html" class="service-link">
+                            <div class="additional-service-box text-center">
+                                <h4>Preguntas Frecuentes</h4>
+                                <p>Aquí podrás hallar las preguntas que más se realizan los dueños de los canes al ser primerizos.</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-md-6">
+                        <a href="carrito.html" class="service-link">
+                            <div class="additional-service-box text-center">
+                                <h4>Tienda Virtual</h4>
+                                <p>En esta tienda podrás encontrar gran variedad de productos para canes y su entretenimiento.</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <main class="container my-5">
+            <h2 class="text-center mb-4">Respuestas a preguntas comunes.</h2>
+            
+            <div class="accordion mb-5" id="accordionExample">
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingOne">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                            ¿Cómo debo alimentar a mi perro?
+                        </button>
+                    </h2>
+                    <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            La alimentación de tu perro depende de su edad, tamaño y nivel de actividad. Consulta con tu veterinario para elegir el mejor alimento y cantidad para tu mascota. Generalmente, los perros adultos deben ser alimentados dos veces al día con raciones equilibradas y adecuadas para su tamaño.
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingTwo">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                            ¿Con qué frecuencia debo bañar a mi perro?
+                        </button>
+                    </h2>
+                    <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            La frecuencia del baño varía según el tipo de pelaje y estilo de vida de tu perro. Generalmente, un baño cada 4-6 semanas es adecuado para la mayoría de los perros. Sin embargo, algunos perros con piel sensible o que pasan mucho tiempo al aire libre pueden necesitar baños más frecuentes.
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingThree">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                            ¿Cómo puedo prevenir las pulgas y garrapatas?
+                        </button>
+                    </h2>
+                    <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            Utiliza productos recomendados por tu veterinario para prevenir pulgas y garrapatas. Estos pueden incluir collares antipulgas, tratamientos tópicos o pastillas. Además, revisa regularmente a tu perro para detectar cualquier signo de infestación.
+                        </div>
+                    </div>
+                </div>
+
+        <section <div id="gallery" class="py-5">
+            <div class="container">
+                <h2 class="text-center mb-4">Galería de Imágenes</h2>
+                <div class="row">
+                    <div class="col-md-4">
+                        <img src="imagenes/img.perrospq/Shih_Tzu.webp" alt="Galería 1" class="img-fluid" onclick="openModal(this);">
+                    </div>
+                    <div class="col-md-4">
+                        <img src="imagenes/img.perrosmedianos/Border Collie.jpg" alt="Galería 2" class="img-fluid" onclick="openModal(this);">
+                    </div>
+                    <div class="col-md-4">
+                        <img src="imagenes/img.perrosgrandes/Rottweiler.jpg" alt="Galería 3" class="img-fluid" onclick="openModal(this);">
+                    </div>
+                    <div class="col-md-4">
+                        <img src="imagenes/img.perrospq/Pomerania.webp" alt="Galería 4" class="img-fluid" onclick="openModal(this);">
+                    </div>
+                    <div class="col-md-4">
+                        <img src="imagenes/img.perrosmedianos/Shiba Inu.jpg" alt="Galería 5" class="img-fluid" onclick="openModal(this);">
+                    </div>
+                    <div class="col-md-4">
+                        <img src="imagenes/img.perrosgrandes/San_Bernardo.webp" alt="Galería 6" class="img-fluid" onclick="openModal(this);">
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        
+        <div id="imageModal" class="modal fade" tabindex="-1" role="dialog">
+          <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+              <div class="modal-body">
+                <img id="modalImage" src="" class="img-fluid">
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <script>
+            function openModal(img) {
+                var modalImage = document.getElementById("modalImage");
+                modalImage.src = img.src; 
+                var modal = new bootstrap.Modal(document.getElementById('imageModal'));
+                modal.show();
+            }
+            </script>
+                    
+            </div>
+        </section>
+        <link rel="stylesheet" href="eventos.css">
+    <style>
+        
+        #calendar {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        
+        .calendar-and-reminders {
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+        }
+
+        
+        .reminders-alerts-section {
+            flex: 1;
+            background-color: #f8f9fa;
+            padding: 20px;
+            border-radius: 8px;
+            max-height: 200px;
+            overflow-y: hidden;
+            transition: max-height 0.3s ease-in-out;
+        }
+
+        .reminders-alerts-section.expanded {
+            max-height: 600px; 
+        }
+
+        .reminders-alerts-section h2 {
+            font-size: 24px;
+            margin-bottom: 15px;
+        }
+
+        #reminders-alerts-list {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        #reminders-alerts-list li {
+            background-color: #ffffff;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #dee2e6;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+
+    
+    <section class="calendar-and-reminders container mt-5">
+        
+        <div class="calendar-section">
+            <h1>Calendario de Eventos y Talleres</h1>
+            <div id='calendar'></div>
+        </div>
+
+        
+        <section class="reminders-alerts-section" id="remindersSection">
+            <h2>Recordatorios y Alertas</h2>
+            <ul id="reminders-alerts-list">
+                
+            </ul>
+        </section>
+    </section>
+
+    
+    <div class="modal fade" id="eventModal" tabindex="-1" aria-labelledby="eventModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="eventModalLabel">Detalles del Evento</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="eventForm" action="crear_evento.php" method="POST">
+                        <div class="mb-3">
+                            <label for="eventTitle" class="form-label">Título del Evento</label>
+                            <input type="text" class="form-control" id="eventTitle" name="titulo" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="eventStart" class="form-label">Fecha y Hora de Inicio</label>
+                            <input type="datetime-local" class="form-control" id="eventStart" name="fecha_hora" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="eventDescription" class="form-label">Descripción</label>
+                            <textarea class="form-control" id="eventDescription" name="descripcion" rows="3" required></textarea>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="submit" class="btn btn-primary">Guardar</button>
+                            <button type="button" id="deleteEventButton" class="btn btn-danger">Eliminar Evento</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div> 
+
+    <script src='https://cdn.jsdelivr.net/npm/fullcalendar@6.1.7/index.global.min.js'></script>
+    <script src='https://cdn.jsdelivr.net/npm/fullcalendar@6.1.7/locales/es.global.min.js'></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var calendarEl = document.getElementById('calendar');
+            var remindersSection = document.getElementById('remindersSection'); 
+            var remindersList = document.getElementById('reminders-alerts-list'); 
+            var selectedDate;
+
+            var calendar = new FullCalendar.Calendar(calendarEl, {
+                initialView: 'dayGridMonth',
+                editable: true,
+                selectable: true,
+                locale: 'es',  
+                contentHeight: 'auto',  
+                events: [],
+                dateClick: function(info) {
+                    selectedDate = info.dateStr; 
+                    document.getElementById('eventStart').value = selectedDate;
+                    var modal = new bootstrap.Modal(document.getElementById('eventModal'));
+                    modal.show();
+                },
+                eventClick: function(info) {
+                    var eventObj = info.event;
+                    document.getElementById('eventTitle').value = eventObj.title;
+                    document.getElementById('eventStart').value = eventObj.start.toISOString().slice(0, -1);
+                    document.getElementById('eventDescription').value = eventObj.extendedProps.description;
+
+                    document.getElementById('deleteEventButton').onclick = function() {
+                        eventObj.remove();
+                        updateReminders();
+                        modal.hide();
+                    };
+
+                    var modal = new bootstrap.Modal(document.getElementById('eventModal'));
+                    modal.show();
+                }
+            });
+
+            calendar.render();
+
+            var eventForm = document.getElementById('eventForm');
+            eventForm.addEventListener('submit', function (e) {
+                e.preventDefault();
+                var eventTitle = document.getElementById('eventTitle').value;
+                var eventStart = document.getElementById('eventStart').value;
+                var eventDescription = document.getElementById('eventDescription').value;
+
+                calendar.addEvent({
+                    title: eventTitle,
+                    start: eventStart,
+                    description: eventDescription
+                });
+
+                updateReminders();  
+
+                var modal = bootstrap.Modal.getInstance(document.getElementById('eventModal'));
+                modal.hide();
+                eventForm.reset();
+            });
+
+            function updateReminders() {
+                remindersList.innerHTML = ''; 
+
+                var events = calendar.getEvents();
+                if (events.length > 0) {
+                    remindersSection.classList.add('expanded'); 
+                } else {
+                    remindersSection.classList.remove('expanded'); 
+                }
+
+                events.forEach(function(event) {
+                    var reminderItem = document.createElement('li');
+                    reminderItem.textContent = event.title + ' - ' + event.start.toLocaleDateString();
+                    remindersList.appendChild(reminderItem);
+                });
+            }
+        });
+    </script>
+
+    </main>
+
+    <footer class="bg-dark text-white">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h5>Contacto</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#">cra 28 d # 108 da 18</a></li>
+                        <li><a href="#">3002652632</a></li>
+                        <li><a href="#">Email: Patitasalrescate@gmail.com</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h5>Servicios</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="consejos.html">Consejos</a></li>
+                        <li><a href="carrito.html">Tienda virtual</a></li>
+                        <li><a href="eventos.html">Calendario de eventos</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h5>Redes Sociales</h5>
+                    <div class="social-links">
+                        <a href="#" class="bi bi-facebook"></a>
+                        <a href="https://x.com/patitas_al_resc" class="bi bi-twitter"></a>
+                        <a href="#" class="bi bi-instagram"></a>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-4">
+                <p>&copy; 2024 Patitas al Rescate. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-bg2XTQX8kH0nF6Vyk0z4VGMdU3SpdO3/8tzZ1VypQb6F5TY4w6TkrAb6r7F1MZg" crossorigin="anonymous"></script>
+    <script>
+        
+        const slider = document.getElementById('slider');
+        let index = 0;
+
+        function showSlide(slideIndex) {
+            const slides = slider.getElementsByClassName('slide');
+            if (slideIndex >= slides.length) {
+                index = 0;
+            } else if (slideIndex < 0) {
+                index = slides.length - 1;
+            } else {
+                index = slideIndex;
+            }
+            slider.style.transform = `translateX(${-index * 100}%)`;
+        }
+
+        setInterval(() => {
+            showSlide(index + 1);
+        }, 3000); 
+    </script>
+</body>
+</html>

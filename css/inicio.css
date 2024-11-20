@@ -1,0 +1,217 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #FDF6EC;
+    color: #333;
+}
+.navbar {
+    transition: background-color 0.3s ease;
+}
+
+.navbar-brand {
+    font-weight: bold;
+    color: #E2AA87;
+    transition: color 0.3s ease;
+}
+
+.navbar-nav .nav-link {
+    font-weight: bold;
+    color: #E2AA87;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #333;
+    transform: translateY(-2px);
+}
+
+.navbar-nav .nav-link.active {
+    color: #E2AA87;
+}
+
+.navbar-nav .nav-link.inicio {
+    color: #333;
+}
+
+.navbar-nav .nav-link.inicio:hover {
+    color: #333;
+}
+
+.slider-box {
+    width: 80%;
+    max-width: 1280px;
+    height: 80vh; 
+    overflow: hidden;
+    position: relative;
+}
+
+.slider-box ul {
+    display: flex;
+    padding: 0;
+    width: 400%;
+    height: 100%; 
+    animation: slide 20s infinite alternate ease-in-out;
+}
+
+.slider-box li {
+    width: 100%;
+    list-style: none;
+    position: relative;
+}
+
+.texto {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    text-align: center;
+    width: 90%; 
+}
+
+.texto h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.texto p {
+    font-size: 16px;
+}
+
+.slider-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+}
+
+@keyframes slide {
+    0% {margin-left: 0;}
+    20% {margin-left: 0;}
+    25% {margin-left: -100%;}
+    45% {margin-left: -100%;}
+    50% {margin-left: -200%;}
+    70% {margin-left: -200%;}
+    75% {margin-left: -300%;}
+    100% {margin-left: -300%;}
+}
+.slogan {
+    background-color: #E2AA87;
+    color: #FFF;
+    padding: 50px 0;
+    width: 85%;
+    border-radius: 10px;
+}
+
+#faq {
+    background-color: #F4D3B3;
+    color: #333;
+}
+
+.accordion-button {
+    background-color: #E2AA87;
+    color: #FFF;
+    border: none;
+}
+
+.accordion-button:not(.collapsed) {
+    color: #333;
+    background-color: #D1896F;
+}
+
+.accordion-button:hover {
+    background-color: #D1896F;
+    color: #FFF;
+}
+
+#faq-message .btn-primary {
+    background-color: #E2AA87;
+    border: none;
+}
+
+#faq-message .btn-primary:hover {
+    background-color: #D1896F;
+}
+
+.card {
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.card-img-top {
+    width: 100%;
+    height: auto;
+}
+
+.card-body {
+    text-align: center;
+}
+
+.btn-pink {
+    background-color: #F4A4B4;
+    color: #FFF;
+    border: none;
+}
+
+.btn-pink:hover {
+    background-color: #E2AA87;
+}
+
+footer {
+    background-color: #333;
+    color: #FFF;
+    padding: 40px 0;
+}
+
+footer h5 {
+    color: #FFF;
+    margin-bottom: 15px;
+}
+
+footer a {
+    color: #FFF;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+footer a:hover {
+    color: #E2AA87;
+}
+
+footer .social-links a {
+    font-size: 1.5rem;
+    margin-right: 15px;
+    color: #FFF;
+}
+
+footer .social-links a:hover {
+    color: #E2AA87;
+}
+
+footer .list-unstyled {
+    list-style: none;
+    padding-left: 0;
+}
+
+footer .list-unstyled li {
+    margin-bottom: 10px;
+}
+
+footer .list-unstyled li a {
+    color: #FFF;
+    transition: color 0.3s ease;
+}
+
+footer .list-unstyled li a:hover {
+    color: #E2AA87;
+}
+
+footer .text-center {
+    margin-top: 30px;
+}
+
+footer p {
+    color: #FFF;
+    margin: 0;
+}
